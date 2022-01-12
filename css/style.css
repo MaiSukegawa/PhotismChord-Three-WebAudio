@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-family: 'Calisto MT', Bookman, Georgia, Times, 'Times New Roman', serif;
+}
+
+button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 38.2%;
+    background-color: black;
+    color: white;
+    font-size: 4vmin;
+    font-family: inherit;
+    letter-spacing: 0.5vmin;
+    text-align: center;
+    border: none;
+}
+
+.deleted {
+    display: none;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#title {
+    position: fixed;
+    top: 38.2%;
+    width: 100%;
+    text-align: center;
+    transition-duration: 1s;
+    animation: fade 1s;
+    z-index: 200;
+}
+
+@media screen and (orientation: portrait) {
+    #title {
+        font-size: 9vw;
+        letter-spacing: 1vw;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    #title {
+        font-size: 7vw;
+        letter-spacing: 1.5vw;
+    }
+}
+
+#loading {
+    transition-duration: 0.5s;
+    animation: fade 0.5s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+#start {
+    transition-duration: 1s;
+    z-index: 100;
+}
+
+#start:hover {
+    letter-spacing: 1vmin;
+}
+
+#alert {
+    text-align: center;
+    z-index: 999;
+}
+
+@keyframes fade {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
